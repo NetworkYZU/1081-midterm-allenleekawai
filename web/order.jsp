@@ -13,11 +13,15 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     </head>
     <body>
+        
         <!--
         question 3 (10%)
+        -->
+        <form method="POST" action="addOrder">
+        <!--
         將表單的目標設定爲 addOrder，使用 post
         -->
-        <form>
+        
             <select name="food">
                 <option value="氧氣草">氧氣草</option>
                 <option value="惡魔果實">惡魔果實</option>

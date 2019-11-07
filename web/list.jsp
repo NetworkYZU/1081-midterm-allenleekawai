@@ -22,8 +22,20 @@
                 <th>項目</th>
             </thead>
             <tbody>
+                
                 <!--
                 question 1 (30%)
+                -->
+                <ol>
+                    <%
+                        ArrayList list=(ArrayList)session.getAttribute("list");
+                        for(int i=0; list!=null && i<list.size(); i++) {
+                            String t=(String)list.get(i);
+                            out.println("<tr><td><li>" + t + "</li></td></tr>");
+                        }
+                    %>
+                </ol>
+                <!--
                 從 session 取得 foodList 這個 attribute 
                 將 foodList 裏面的每個字串列成 table 的一列
                 例如
@@ -33,9 +45,14 @@
             </tbody>
         </table>
         <a href="checkout.jsp"><button>Checkout</button></a><br/>
+        
         <!--
         question 2 (10%)
+        -->
+        <%@ include file="/WEB-INF/footer.jsp" %>
+        <!--
         引用 /WEB-INF/footer.jsp
         -->
+        
     </body>
 </html>

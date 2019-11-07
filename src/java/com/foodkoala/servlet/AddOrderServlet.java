@@ -34,14 +34,27 @@ public class AddOrderServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
+        
         /*
         question 5 (30%)
+        */
+        String t = request.getParameter("t");
+        HttpSession session = request.getSession();
+        ArrayList list = (ArrayList)session.getAttribute("list");
+        if(list==null) {
+            list = new ArrayList();
+            session.setAttribute("list", list);
+        }
+        list.add(t);
+        /*
         取得 session 物件，接收 user 傳來的 food 參數，
         將參數儲存到 session 物件裏面（你會需要將其儲存到一個 ArrayList 裏面，因爲會有多個 food）
+	*/
         
-        question 6 (10%)
-        最後外轉址到 list.jsp
-        */
+        //question 6 (10%)
+        response.sendRedirect("list.jsp");
+        //最後外轉址到 list.jsp
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -4,6 +4,7 @@
     Author     : lendle
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,10 +14,20 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     </head>
     <body>
+        
         <!--
         question 4 (10%)
+        -->
+        <%
+            ArrayList list = (ArrayList)session.getAttribute("list");
+            if(list!=null) {
+                list.clear();
+            }
+        %>
+        <!--
         將 session 無效化，使其內容完全被清掉
         -->
+        
         訂單已收到！<a href="index.html">回首頁</a>
        
     </body>
