@@ -11,6 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
         <title>FoodKoala, your elite food ordering and delivering service</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     </head>
